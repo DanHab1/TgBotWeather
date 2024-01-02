@@ -33,12 +33,12 @@ namespace BotTg
                     {
                         case "/start":
                             await botClient.SendTextMessageAsync(message.Chat,
-                                "Приветствую тебя!\nЯ бот погоды.\nНапиши название города и я скажу тебе погоду на текущий момент.");
+                                "Приветствую тебя!\nЯ бот погоды!\nНапиши название города и я скажу тебе погоду на текущий момент.\nДля установки значения напишите 'город - запомни'");
                             Mutation.CreateOrUpdateUser(message.From.Id, "Казань");
                             return;
                         case "/option":
                             await botClient.SendTextMessageAsync(message.Chat,
-                                    "Для установки значения напишите 'город - запомни'\nТекущие настройки:\n" + JsonConvert.SerializeObject(Query.GetUser(message.From.Id)));
+                                    "Текущие настройки:\n" + AnswerHelper.GetTextModelUserOption(Query.GetUser(message.From.Id)));
                             return;
                         }
 
