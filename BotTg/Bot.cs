@@ -2,7 +2,7 @@
 using Telegram.Bot.Types;
 using Newtonsoft.Json;
 using Telegram.Bot.Polling;
-using BotTg;
+using BotTg.Helper;
 using BotTg.Db.CRUD;
 using BotTg.Model;
 
@@ -46,7 +46,7 @@ namespace BotTg
                         var user = Mutation.CreateOrUpdateUser(message.From.Id, textMessage.Split(" - ")[0]);
                         Mutation.UpdateAutoMessage(message.From.Id, true);
                         await botClient.SendTextMessageAsync(message.Chat,
-                            $"Я запомнил город {user.City}.\nБуду каждые 2 часа направлять Вам погоду по данному городу.\n Для отмены напишите 'stop'");
+                            $"Я запомнил город {AnswerHelper.FirstLetterUpper(user.City)}.\nБуду каждые 2 часа направлять Вам погоду по данному городу.\n Для отмены напишите 'stop'");
                     }
                     else if (textMessage.Contains("stop"))
                     {
