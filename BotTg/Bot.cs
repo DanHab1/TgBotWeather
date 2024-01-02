@@ -5,6 +5,7 @@ using Telegram.Bot.Polling;
 using BotTg.Helper;
 using BotTg.Db.CRUD;
 using BotTg.Model;
+using Telegram.Bot.Types.Enums;
 
 namespace BotTg
 {
@@ -17,7 +18,7 @@ namespace BotTg
             Console.WriteLine(JsonConvert.SerializeObject(update));
             
             var message = update.Message;
-            if (update.Type != Telegram.Bot.Types.Enums.UpdateType.Message || update.Message == null)
+            if (update.Type != UpdateType.Message || update.Message == null || message.Type != MessageType.Text)
             {
                 return;
             }
@@ -46,7 +47,7 @@ namespace BotTg
                         var user = Mutation.CreateOrUpdateUser(message.From.Id, textMessage.Split(" - ")[0]);
                         Mutation.UpdateAutoMessage(message.From.Id, true);
                         await botClient.SendTextMessageAsync(message.Chat,
-                            $"Я запомнил город {AnswerHelper.FirstLetterUpper(user.City)}.\nБуду каждые 2 часа направлять Вам погоду по данному городу.\n Для отмены напишите 'stop'");
+                            $"Я запомнил город {AnswerHelper.FirstLetterUpper(user.City)}.\nБуду каждые 2 часа направлять Вам погоду по данному городу.\nДля отмены напишите 'stop'");
                     }
                     else if (textMessage.Contains("stop"))
                     {
