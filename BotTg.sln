@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotTg", "BotTg\BotTg.csproj", "{630A5793-A6DC-498E-AEAA-A135F83F0256}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotTg.Db", "BotTg.Db\BotTg.Db.csproj", "{96931C85-A918-401D-9ED3-F5105EB77DEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{630A5793-A6DC-498E-AEAA-A135F83F0256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{630A5793-A6DC-498E-AEAA-A135F83F0256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{630A5793-A6DC-498E-AEAA-A135F83F0256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{630A5793-A6DC-498E-AEAA-A135F83F0256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96931C85-A918-401D-9ED3-F5105EB77DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96931C85-A918-401D-9ED3-F5105EB77DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96931C85-A918-401D-9ED3-F5105EB77DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96931C85-A918-401D-9ED3-F5105EB77DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23D3C24C-8A96-4068-8C28-9B2BC2FA0439}
+	EndGlobalSection
+EndGlobal
