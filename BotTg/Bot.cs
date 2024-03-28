@@ -11,7 +11,7 @@ namespace BotTg
 {
     public class Bot
     {
-        private static ITelegramBotClient bot = new TelegramBotClient("6235591095:AAEKavGZMlgRXvRi_lEfEWoGzwcOVJfFeWs");
+        private static ITelegramBotClient bot = new TelegramBotClient("6235591095:AAEKavGZMlgRXvRi_lEfEWoGzwcOVJfFeWs"); //@BotForTestDH_bot
 
         public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
